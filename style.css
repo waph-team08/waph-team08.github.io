@@ -1,0 +1,217 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 600px;
+    margin:20px;
+    padding-right: 40px;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#digit-clock {
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+form {
+    margin-top: 20px;
+}
+
+input[type="text"],
+input[type="password"],[type="email"],
+button,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #1877f2;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    align-items: center;
+    margin-left: 10px;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #166fe5;
+}
+
+#view{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #1877f2;
+    color: #fff;
+    margin-left: 10px;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    width:93%;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+a {
+    text-decoration: none;
+    color: #1877f2;
+
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table,
+th,
+td {
+    border: 1px solid #ccc;
+}
+
+th,
+td {
+    padding: 8px;
+    text-align: left;
+}
+
+/* Styling  for view_posts.php */
+
+.post {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.post h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.post p {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #666;
+}
+
+.post .author {
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #999;
+}
+
+.post .post-time {
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #999;
+}
+
+.edit-button-styling {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #1877f2;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.post .edit-button,
+.post .delete-button {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #1877f2;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.post .edit-button:hover,
+.post .delete-button:hover {
+    background-color: #0e5a9f;
+}
+
+.post .add-comment-button {
+    display: block;
+    padding: 10px 20px;
+    background-color: #1877f2;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.post .add-comment-button:hover {
+    background-color: #0e5a9f;
+}
+
+.comments p {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #666;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #1877f2;
+    border: 1px solid #1877f2;
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.back-link:hover {
+    background-color: #1877f2;
+    color: #ffffff;
+}
