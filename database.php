@@ -47,6 +47,20 @@ function checklogin_mysql($username, $password) {
     return $stmt->affected_rows == 1;
 }
 
+function getUsernames() {
+    global $mysqli;
+    $usernames = array();
+    $query = "SELECT username FROM users";
+    $result = $mysqli->query($query);
+
+    if ($result) {
+        while ($row = $result->fetch_assoc()) {
+            $usernames[] = $row['username'];
+        }
+    }
+
+    return $usernames;
+}
 
 function getUserInfo($username) {
     global $mysqli;
@@ -121,6 +135,46 @@ function deletePost($postID) {
     $stmt_post->execute();
     
     return $stmt_post->affected_rows == 1;
+}
+
+function isSuperUser($username, $password) {
+    global $mysqli;
+    $prepared_sql = "SELECT * FROM superusers WHERE username = ?";
+    $stmt = $mysqli->prepare($prepared_sql);
+    $stmt->bind_param("s", $username);
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    // Check if user exists
+    if ($result->num_rows == 1) {
+        $user = $result->fetch_assoc();
+        // Verify the password
+        if (password_verify($password, $user['password'])) {
+            return true; // User is a superuser
+        }
+    }
+    return false; // User is not a superuser or invalid credentials
+}
+
+function isSuperUserStored($username) {
+    global $mysqli;
+    $prepared_sql = "SELECT * FROM superusers WHERE username = ?";
+    $stmt = $mysqli->prepare($prepared_sql);
+    $stmt->bind_param("s", $username);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    return $result->num_rows > 0;
+}
+
+function storeSuperUserCredentials($username, $password) {
+    global $mysqli;
+    // Hashing the password before storing
+    $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+    $prepared_sql = "INSERT INTO superusers (username, password) VALUES (?, ?)";
+    $stmt = $mysqli->prepare($prepared_sql);
+    $stmt->bind_param("ss", $username, $hashed_password);
+    $stmt->execute();
+    return $stmt->affected_rows == 1;
 }
 
 ?>

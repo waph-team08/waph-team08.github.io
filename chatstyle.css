@@ -1,0 +1,80 @@
+/* Sidebar Styles */
+.sidebar {
+    width: 250px;
+    background-color: #f0f2f5;
+    border-right: 1px solid #ccc;
+    padding: 20px;
+}
+
+.contact-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.contact-list li {
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.contact-list li:hover {
+    background-color: #e4e6eb;
+}
+
+/* Chat Area Styles */
+.chat-area {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+.chat-header {
+    background-color: #1877f2;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+.message-container {
+    overflow-y: scroll;
+    max-height: 400px;
+}
+
+.message {
+    background-color: #e4e6eb;
+    color: #000;
+    border-radius: 10px;
+    padding: 8px 12px;
+    margin-bottom: 10px;
+    max-width: 70%;
+}
+
+.sent-message {
+    align-self: flex-end;
+    background-color: #1877f2;
+    color: #fff;
+}
+
+.message-input {
+    margin-top: 20px;
+    display: flex;
+}
+
+.message-input input {
+    flex-grow: 1;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+.message-input button {
+    padding: 10px 20px;
+    background-color: #1877f2;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.message-input button:hover {
+    background-color: #0e5a9f;
+}
