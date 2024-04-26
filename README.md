@@ -17,7 +17,8 @@
 
 # Project Management Information
 
-Video Demonstration : 
+Video Demonstration : https://mailuc-my.sharepoint.com/:v:/g/personal/venagaci_mail_uc_edu/EeK2LIQuhVZInxubnqGotwQB2bSSInFn8aMCuhCCViR-Tg?e=gSyoEJ
+## ( PLEASE CONSIDER ABOVE VIDEO LINK FOR GRADING.THIS VIDEO DEMONSTRATION HAS CHATTING SYSTEM )
 
 Source code repository (private access): <https://github.com/waph-team08/waph-teamproject>
 
