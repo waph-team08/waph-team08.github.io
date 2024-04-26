@@ -407,7 +407,7 @@ $result = $mysqli->query($sql);
 </html>
 
 ```
-chat.php:
+chat.php
 
 ```php
 
@@ -474,7 +474,7 @@ chat.php:
 
 view_messages.php:
 
-```php:
+```php
 <?php
 include('db_connection.php');
 
@@ -601,3 +601,6 @@ if ($result) {
 The rest of the code is in this link:
 
 https://github.com/waph-team08/waph-teamproject/tree/main/Final_Project
+
+Team Github.io Repository: https://github.com/waph-team08/waph-team08.github.io
+
